@@ -28,7 +28,7 @@ main() {
     log_fatal "Invalid flag, supported values: --hello, --how-are-you, --goodbye."
   fi
 
-  sleep 1
+#  sleep 1
 }
 
 main "$@"
