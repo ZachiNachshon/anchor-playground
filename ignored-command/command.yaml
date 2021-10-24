@@ -1,0 +1,5 @@
+name: ignored-command
+description: "Example of an ignored command folder"
+command:
+  use: ignored-command
+  short: "This command description should not be seen"

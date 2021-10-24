@@ -1,0 +1,5 @@
+name: dummy-ops-k8s
+description: "Dummy no-op Kubernetes operations using instruction context"
+command:
+  use: dummy-ops-k8s
+  short: "Example of no-op dummy Kubernetes operations"

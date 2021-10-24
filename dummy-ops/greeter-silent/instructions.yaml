@@ -1,0 +1,32 @@
+instructions:
+  actions:
+    - id: hello-world-silent
+      title: "Say hello, but silently"
+      description: "Dummy action using direct no-op script #1"
+      script: |
+        echo "Add attribute 'showOutput: true' to see this message"
+        sleep 1
+
+    - id: how-are-you-silent
+      title: "Ask how you are, but silently"
+      description: "Dummy action using direct no-op script #2"
+      script: |
+        echo "Add attribute 'showOutput: true' to see this message"
+        sleep 1
+
+    - id: goodbye-world-silent
+      title: "Say goodbye, but silently"
+      description: "Dummy action using direct no-op script #3"
+      script: |
+        echo "Add attribute 'showOutput: true' to see this message"
+        sleep 1
+
+  workflows:
+    - id: good-manners-simulation
+      title: "Say hello, ask how are you and finish with goodbye, silently"
+      description: "Simulate dummy commands from direct no-op scripts"
+      tolerateFailures: true
+      actionIds:
+        - hello-world-silent
+        - how-are-you-silent
+        - goodbye-world-silent

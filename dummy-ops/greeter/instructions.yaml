@@ -1,0 +1,29 @@
+instructions:
+  actions:
+    - id: hello-world
+      title: "Say hello, but silently"
+      description: "Dummy action using no-op script file #1"
+      scriptFile: dummy-ops/greeter/scripts/dummy_no_op.sh --hello ${USER}
+      showOutput: true
+
+    - id: how-are-you
+      title: "Ask how you are"
+      description: "Dummy action using no-op script file #2"
+      scriptFile: dummy-ops/greeter/scripts/dummy_no_op.sh --how-are-you
+      showOutput: true
+
+    - id: goodbye-world
+      title: "Say goodbye"
+      description: "Dummy action using no-op script file #3"
+      scriptFile: dummy-ops/greeter/scripts/dummy_no_op.sh --goodbye ${USER}
+      showOutput: true
+
+  workflows:
+    - id: good-manners-simulation
+      title: "Say hello, ask how are you and finish with goodbye"
+      description: "Simulate dummy commands from no-op script files"
+      tolerateFailures: true
+      actionIds:
+        - hello-world
+        - how-are-you
+        - goodbye-world

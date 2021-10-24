@@ -1,0 +1,8 @@
+instructions:
+  actions:
+    - id: should-not-be-seen
+      title: "This command item should not be seen"
+      description: "Example of an ignored command folder"
+      script: |
+        echo "Should never execute"
+      showOutput: true
