@@ -1,7 +1,7 @@
 instructions:
   actions:
     - id: hello-world
-      title: "Say hello, but silently"
+      title: "Say hello"
       description: "Dummy action using no-op script file #1"
       scriptFile: dummy-ops/greeter/scripts/dummy_no_op.sh --hello ${USER}
       showOutput: true
