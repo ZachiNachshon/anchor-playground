@@ -1,18 +1,21 @@
 instructions:
   actions:
     - id: hello-world
+      displayName: "Print: Hello Verbose Example"
       title: "Say hello"
       description: "Dummy action using no-op script file #1"
       scriptFile: dummy-ops/greeter/scripts/dummy_no_op.sh --hello ${USER}
       showOutput: true
 
     - id: how-are-you
+      displayName: "Print: Question Verbose Example"
       title: "Ask how you are"
       description: "Dummy action using no-op script file #2"
       scriptFile: dummy-ops/greeter/scripts/dummy_no_op.sh --how-are-you
       showOutput: true
 
     - id: goodbye-world
+      displayName: "Print: Goodbye Verbose Example"
       title: "Say goodbye"
       description: "Dummy action using no-op script file #3"
       scriptFile: dummy-ops/greeter/scripts/dummy_no_op.sh --goodbye ${USER}
@@ -20,6 +23,7 @@ instructions:
 
   workflows:
     - id: good-manners-simulation
+      displayName: "Print: Workflow Verbose Example"
       title: "Say hello, ask how are you and finish with goodbye"
       description: "Simulate dummy commands from no-op script files"
       tolerateFailures: true
