@@ -4,6 +4,7 @@ globals:
 instructions:
   actions:
     - id: hello-k8s-context
+      displayName: "Print: Kubernetes Active Context"
       title: "Print k8s current context and say hello"
       description: "Print k8s context before running a stale no-op action"
       context: kubernetes

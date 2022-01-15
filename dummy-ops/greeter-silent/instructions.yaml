@@ -1,6 +1,7 @@
 instructions:
   actions:
     - id: hello-world-silent
+      displayName: "Print: Hello Example"
       title: "Say hello, but silently"
       description: "Dummy action using direct no-op script #1"
       script: |
@@ -8,6 +9,7 @@ instructions:
         sleep 1
 
     - id: how-are-you-silent
+      displayName: "Print: Question Example"
       title: "Ask how you are, but silently"
       description: "Dummy action using direct no-op script #2"
       script: |
@@ -15,6 +17,7 @@ instructions:
         sleep 1
 
     - id: goodbye-world-silent
+      displayName: "Print: Goodbye Example"
       title: "Say goodbye, but silently"
       description: "Dummy action using direct no-op script #3"
       script: |
@@ -23,6 +26,7 @@ instructions:
 
   workflows:
     - id: good-manners-simulation
+      displayName: "Print: Workflow Example"
       title: "Say hello, ask how are you and finish with goodbye, silently"
       description: "Simulate dummy commands from direct no-op scripts"
       tolerateFailures: true
