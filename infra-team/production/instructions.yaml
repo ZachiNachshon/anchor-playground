@@ -44,7 +44,9 @@ instructions:
       showOutput: true
       context: kubernetes
       script: |
-        echo "SSH into multiple machines, install ES node and connect them a running master..."
+        echo "Prompt for mixReplica..."
+        echo "Prompt for maxReplica..."
+        echo "Use kubectul and update cluster hpa with new limits..."
         sleep 1
 
   workflows:
