@@ -1,0 +1,40 @@
+instructions:
+  actions:
+    - id: install-jenkins-master
+      displayName: "Jenkins: Install Server"
+      title: "No-Op action, used as an example"
+      description: "Install a Jenkins server on a remote machine.\n\n
+\t\tGCP Cloud Provider:\n 
+\t\t  • Region: us-west1\n\n
+\t\tAnsible playbook vars:\n
+\t\t  • IP Address\n
+\t\t  • Secrets fetched from Vault"
+      showOutput: true
+      script: |
+        echo "SSH into a remote machine and install a Jenkins server..."
+        sleep 1
+
+    - id: install-jenkins-agents
+      displayName: "Jenkins: Install Agents"
+      title: "No-Op action, used as an example"
+      description: "Install a Jenkins agent on multiple machines and connect them to a running server.\n\n
+\t\tGCP Cloud Provider:\n 
+\t\t  • Region: us-west1\n\n
+\t\tAnsible playbook vars:\n
+\t\t  • Server IP Address\n
+\t\t  • Number of agents (default x3)\n
+\t\t  • Secrets fetched from Vault"
+      showOutput: true
+      script: |
+        echo "SSH into multiple machines, install a Jenkins agent and connect them a running server..."
+        sleep 1
+
+  workflows:
+    - id: provision-jenkins-server-agents
+      displayName: "Jenkins: Provision Server/Agents"
+      title: "No-Op action, used as an example"
+      description: "Provision a Jenkins server and x3 agents"
+      tolerateFailures: true
+      actionIds:
+        - install-jenkins-master
+        - install-jenkins-agents

@@ -1,0 +1,34 @@
+instructions:
+  actions:
+    - id: create-fed-dev-env
+      displayName: "FED: Create Dev Environment"
+      title: "No-Op action, used as an example"
+      description: "Provision a fresh front-end dev environment.\n\n
+\t\tAWS Cloud Provider:\n 
+\t\t  • Region: N. Virginia\n\n
+\t\tTerraform IaC:\n
+\t\t  • BE services: User, Account, Scheduler\n
+\t\t  • Database: mySql\n
+\t\t  • API gateway\n
+\t\t  • Kafka cluster"
+      showOutput: true
+      script: |
+        echo "Run a Terraform apply to create an AWS based FED dev environment..."
+        sleep 1
+
+    - id: destroy-fed-dev-env
+      displayName: "FED: Destory Dev Environment"
+      title: "No-Op action, used as an example"
+      description: "Destroy an existing front-end dev environment.\n\n
+\t\tAWS Cloud Provider:\n 
+\t\t  • Region: N. Virginia\n\n
+\t\tTerraform IaC:\n
+\t\t  • BE services: User, Account, Scheduler\n
+\t\t  • Database: mySql\n
+\t\t  • API gateway\n
+\t\t  • Kafka cluster"
+      showOutput: true
+      script: |
+        echo "Prompt for the environment id to destroy..."
+        echo "Run a Terraform destroy to remove an AWS based FED dev environment..."
+        sleep 1

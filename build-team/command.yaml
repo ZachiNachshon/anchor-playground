@@ -1,0 +1,5 @@
+name: team-build
+description: "Build team CI/CD actions"
+command:
+  use: team-build
+  short: "Build team CI/CD actions"

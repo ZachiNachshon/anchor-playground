@@ -1,0 +1,5 @@
+name: team-infra
+description: "Infrastructure team provisioning actions"
+command:
+  use: team-infra
+  short: "Infrastructure team provisioning actions"

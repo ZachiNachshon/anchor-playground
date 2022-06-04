@@ -1,0 +1,58 @@
+instructions:
+  actions:
+    - id: install-elasticsearch-master
+      displayName: "ElasticSearch: Install Master"
+      title: "No-Op action, used as an example"
+      description: "Install an elastic search master on a remote machine.\n\n
+\t\tAzure Cloud Provider:\n 
+\t\t  • Region: East US\n\n
+\t\tAnsible playbook vars:\n
+\t\t  • IP Address\n
+\t\t  • Secrets fetched from Vault"
+      showOutput: true
+      script: |
+        echo "SSH into a dedicate machine to install an elasticserach cluster (master)..."
+        sleep 1
+
+    - id: install-elasticsearch-nodes
+      displayName: "ElasticSearch: Install Nodes"
+      title: "No-Op action, used as an example"
+      description: "Install elastic search nodes on multiple machines and connect them to a running cluster.\n\n
+\t\tAzure Cloud Provider:\n 
+\t\t  • Region: East US\n\n
+\t\tAnsible playbook vars:\n
+\t\t  • ES master IP Address\n
+\t\t  • Number of agents (default x5)\n
+\t\t  • Secrets fetched from Vault"
+      showOutput: true
+      script: |
+        echo "SSH into multiple machines, install ES node and connect them a running master..."
+        sleep 1
+
+    - id: k8s-build-agents-replicas
+      displayName: "Kubernetes: Adjust build agents replica limits"
+      title: "No-Op action, used as an example"
+      description: "Prompt for mixReplica/maxReplica and update the cluster.\n\n
+\t\tGCP Cloud Provider:\n 
+\t\t  • Region: us-west1\n\n
+\t\tAuthentication:\n
+\t\t  • Method: gcloud\n
+\t\t  • Creds path: /path/to/secret/file\n\n
+\t\tKubernetes:\n
+\t\t  • Namespace: buildkite\n
+\t\t  • Agent-queue: master-builds"
+      showOutput: true
+      context: kubernetes
+      script: |
+        echo "SSH into multiple machines, install ES node and connect them a running master..."
+        sleep 1
+
+  workflows:
+    - id: provision-elasticsearch-cluster
+      displayName: "ElasticSearch: Provision Cluster"
+      title: "No-Op action, used as an example"
+      description: "Provision an ElasticSearch cluster with x1 master and x5 nodes"
+      tolerateFailures: true
+      actionIds:
+        - install-elasticsearch-master
+        - install-elasticsearch-nodes

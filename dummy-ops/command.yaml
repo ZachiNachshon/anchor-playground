@@ -1,5 +1,0 @@
-name: dummy-ops
-description: "Dummy no-op operations"
-command:
-  use: dummy-ops
-  short: "Example of no-op dummy operations"

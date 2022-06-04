@@ -1,0 +1,18 @@
+globals:
+  context: application
+
+instructions:
+  actions:
+    - id: build-bazel-repository
+      displayName: "Bazel: Start a new build"
+      title: "No-Op action, used as an example"
+      description: "Issue a new Bazel build.\n\n
+\t\tBuild agents:\n 
+\t\t  • Queue name: master-builds\n\n
+\t\tEnvironment vars:\n
+\t\t  • RC_FILE_PATH - RC file location (default: ~/.bazelrc)\n
+\t\t  • GIT_REPO - Git repo URL\n
+\t\t  • BRANCH - git branch (default: master)\n
+\t\t  • INVOCATION_ID - build invocation"
+      scriptFile: build-team/bazel/scripts/build-repository.sh ${USER}
+      showOutput: true
